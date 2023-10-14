@@ -87,7 +87,7 @@
 										<div class="TopBannerSection-ProjectDetails--Header-Left">
 											<div class="text_wrapper">
 												<h1>myname AIRDROP</h1>
-												<p>Earn NFTs / Tokens /OATs by Contributing to Your Favorite Web3 Community</p>
+												<p>Earn NFTs / Tokens / OATs by Contributing to Your Favorite Web3 Community</p>
 												<div class="d-flex flex-wrap justify-center space-box" style="display: flex; grid-row-gap: 16px; row-gap: 16px; grid-column-gap: 24px;  -moz-column-gap: 24px; column-gap: 24px; margin-bottom: 36px;"><div class="flex-all-center space-logo" style="    width: 32px;
     height: 32px;"><a href="https://galxe.com/bnbchain" target="_blank" data-v-6a1fdfcc=""><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=026" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/polygon" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/BNB.c511f64.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/solana" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Solana.23a1ca4.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/PancakeSwap" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Pancakeswap.67393dd.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/Optimism" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Optimism.c54ded5.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/coingecko" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/CoinGecko.10872f9.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/arbitrum" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Arbitrum.11c4d4d.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/yearn" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Yearn.1ec7e6f.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div><div class="flex-all-center space-logo" data-v-6a1fdfcc=""><a href="https://galxe.com/TraderJoe" target="_blank" data-v-6a1fdfcc=""><img src="https://b.galxestatic.com/w/s/357fca2/img/Polygon.de359fb.png" style="width:30px; height:30px;" data-v-6a1fdfcc=""></a></div></div>
 											</div>
@@ -140,8 +140,8 @@
 														<div class="progress_bar_tag"><p>Sale</p></div>
 														<div class="token-line">
                             <div class="line">
-<div class="token-number" id="tokenup">Total Raised:<span id="tokennumber">77</span> %</div><span id="endTick" span="">100</span></div>
-<div class="progress_bar_tag airdrop" style="z-index: -1;"><p>Airdrop</p></div>
+<div class="token-number" id="tokenup">Total Raised:<span id="tokennumber">77</span>%</div><span id="endTick" span="">100</span></div>
+<div class="progress_bar_tag_airdrop" style="z-index: -1;"><p>Airdrop</p></div>
                             <div class="progress-line"></div>
                         </div>
 													</div>
@@ -162,7 +162,7 @@
 												<div></div>
 												<div class="bottom__total__raised">
 													<p>Total Airdropped</p>
-													<h2><span class="bottom__total__raised__value">$<div class="tooltip-item" data-tooltipped="" aria-describedby="tippy-tooltip-298" style="display: inline;"></div>$
+													<h2><span class="bottom__total__raised__value"><div class="tooltip-item" data-tooltipped="" aria-describedby="tippy-tooltip-298" style="display: inline;"></div>$
 												<div class="tooltip-item" data-tooltipped="" aria-describedby="tippy-tooltip-299" style="display: inline;"><span>300,000</span></div>
 												</span>
 												</h2>
@@ -318,10 +318,10 @@
 							tokennumbercontent.textContent = number;
 
 							document.querySelector(".progress-line").style.width = " " + howMaxNumber + "%";
-							document.querySelector(".progress_bar_tag.airdrop").style.left = " " + howMaxNumber + "%";
+							document.querySelector(".progress_bar_tag_airdrop").style.left = " " + howMaxNumber + "%";
 
 
-							timerId = setTimeout(tick, 1300);
+							timerId = setTimeout(tick, 5300);
 					} else {
 							console.log("end")
 					}
@@ -330,13 +330,13 @@
 <script>
 			let staticNumber = +document.querySelector('#tokennumber2').textContent;
 
-			document.querySelector('#tokennumber2').textContent = localStorage.getItem('tokennumber');
+			document.querySelector('#tokennumber2').textContent = localStorage.getItem('tokennumber2');
 
 			let timerId = setTimeout(function tick() {
 					let tokennumbercontent = document.querySelector('#tokennumber2');
 					let tokennumber = localStorage.getItem('tokennumber2') || staticNumber;
 					let randomNumber = Math.floor(Math.random() * 500);
-					let number = +tokennumber + +randomNumber;
+					let number = +tokennumber2 + +randomNumber;
 					let endTickNumber = +document.querySelector('#endTick').textContent;
 					let endTick = endTickNumber / 100 * 95;
 					let howMaxNumber = Math.round(+tokennumber * 100 / endTickNumber);
@@ -347,7 +347,7 @@
 							localStorage.setItem('tokennumber2', number)
 							tokennumbercontent.textContent = number;
 
-							document.querySelector(".progress-line2").style.width = " " + howMaxNumber + "%";
+							document.querySelector(".progress-line").style.width = " " + howMaxNumber + "%";
 
 							timerId = setTimeout(tick, 1300);
 					} else {
