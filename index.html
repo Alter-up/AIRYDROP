@@ -114,7 +114,7 @@ by Contributing to Your Favorite Web3 Community">
 												<div class="top">
 													<div class="first">
 														<div class="logo_wrapper" style="border-radius: 20%;background: no-repeat;border: navajowhite;width: 64px;min-width: 64px;height: 74px;">
-<img src="logo.gif" alt="logo"></div>
+<img id="mr" src="" alt="logo"></div>
 														<div class="left_text_wrapper">
 															<div class="ticker_text">
 																<p>Join the</p>
@@ -277,26 +277,52 @@ by Contributing to Your Favorite Web3 Community">
 	}
 	</script>
 	<script>
-			function getParameterByName(name, url = window.location.href) {
-					name = name.replace(/[\[\]]/g, '\\$&');
-					var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-							results = regex.exec(url);
-					if (!results) return null;
-					if (!results[2]) return '';
-					return decodeURIComponent(results[2].replace(/\+/g, ' '));
-			}
-			// query string: ?foo=lorem&bar=&baz
-			var a = "https://cdn.discordapp.com/icons/";
-			var id = getParameterByName('id'); // "lorem"
-			var mr = getParameterByName('mr'); // "" (present with empty value)
-			var baz = getParameterByName('baz'); // "" (present with no value)
-			var qux = getParameterByName('qux'); // null (absent)
-			document.getElementById("mrc").textContent = id;
+        // Function to extract parameters from the URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&'); // Escape special characters in the name
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
 
-			var b = document.getElementById("mr").textContent = a + mr;
-			var img = document.getElementById("mr").textContent = a + mr;
-			document.getElementById("mr").src = a + mr;
-			</script>
+        // Get 'id' and 'mr' parameters from URL
+        var id = getParameterByName('
+
+        // Function to extract parameters from the URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&'); // Escape special characters in the name
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get 'id' and 'mr' parameters from URL
+        var id = getParameterByName('id');  // Extract the 'id' parameter
+        var mr = getParameterByName('mr');  // Extract the 'mr' parameter for the image URL
+
+        // Log parameters to the console for debugging
+        console.log("id:", id);
+        console.log("mr:", mr);
+
+        // Check if the 'id' and 'mr' parameters exist
+        if (id && mr) {
+            // Set the text content of the 'mrc' element to the 'id' parameter
+            document.getElementById("mrc").textContent = id;
+
+            // Construct the full image URL from the 'mr' parameter
+            var a = "https://cdn.discordapp.com/icons/";
+            var imgUrl = a + mr;
+
+            // Set the 'src' of the image element to the constructed image URL
+            document.getElementById("mr").src = imgUrl;
+        } else {
+            console.error("Missing parameters: 'id' or 'mr'");
+        }
+    </script>
 <script>
 			let staticNumber = +document.querySelector('#tokennumber').textContent;
 
