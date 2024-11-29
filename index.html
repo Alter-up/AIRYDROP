@@ -276,20 +276,7 @@ by Contributing to Your Favorite Web3 Community">
 	 window.open(navUrl, "thisName","'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,directories=0,height=320,width=420,left = 70,top = 300'");
 	}
 	</script>
-	<script>
-        // Function to extract parameters from the URL
-        function getParameterByName(name, url = window.location.href) {
-            name = name.replace(/[\[\]]/g, '\\$&'); // Escape special characters in the name
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-
-        // Get 'id' and 'mr' parameters from URL
-        var id = getParameterByName('
-
+  <script>
         // Function to extract parameters from the URL
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&'); // Escape special characters in the name
